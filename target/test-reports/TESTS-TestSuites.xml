@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+  <testsuite errors="0" failures="0" hostname="OSS-2011-2" id="0" name="BankingTransactionTests" package="ormsimplicity" tests="5" time="11.647" timestamp="2012-06-28T22:40:40">
+      <properties />
+
+      <testcase classname="ormsimplicity.BankingTransactionTests" name="testSimpleQuery" time="3.626" />
+
+      <testcase classname="ormsimplicity.BankingTransactionTests" name="testSimpleLazyPropertyAccess" time="2.176" />
+
+      <testcase classname="ormsimplicity.BankingTransactionTests" name="testSimpleEagerPropertyAccess" time="1.636" />
+
+      <testcase classname="ormsimplicity.BankingTransactionTests" name="testLazyDtoCreation" time="1.797" />
+
+      <testcase classname="ormsimplicity.BankingTransactionTests" name="testEagerDtoCreation" time="2.382" />
+
+      <system-out><![CDATA[]]></system-out>
+
+      <system-err><![CDATA[--Output from testSimpleQuery--
+--Output from testSimpleLazyPropertyAccess--
+--Output from testSimpleEagerPropertyAccess--
+--Output from testLazyDtoCreation--
+--Output from testEagerDtoCreation--
+]]></system-err>
+
+  </testsuite>
+</testsuites>
