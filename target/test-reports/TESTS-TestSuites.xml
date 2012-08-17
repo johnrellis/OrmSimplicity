@@ -1,25 +1,109 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite errors="0" failures="0" hostname="OSS-2011-2" id="0" name="BankingTransactionTests" package="ormsimplicity" tests="5" time="11.647" timestamp="2012-06-28T22:40:40">
+  <testsuite errors="0" failures="2" hostname="OSS-2011-2" id="0" name="CustomerTests" package="ormsimplicity" tests="5" time="6.012" timestamp="2012-08-17T09:32:46">
       <properties />
 
-      <testcase classname="ormsimplicity.BankingTransactionTests" name="testSimpleQuery" time="3.626" />
+      <testcase classname="ormsimplicity.CustomerTests" name="testNotRetrievingFavouritesCollection" time="1.63" />
 
-      <testcase classname="ormsimplicity.BankingTransactionTests" name="testSimpleLazyPropertyAccess" time="2.176" />
+      <testcase classname="ormsimplicity.CustomerTests" name="testRetrievingFavouritesCollection" time="0.897" />
 
-      <testcase classname="ormsimplicity.BankingTransactionTests" name="testSimpleEagerPropertyAccess" time="1.636" />
+      <testcase classname="ormsimplicity.CustomerTests" name="testRetrievingFavouritesLazily" time="0.932" />
 
-      <testcase classname="ormsimplicity.BankingTransactionTests" name="testLazyDtoCreation" time="1.797" />
+      <testcase classname="ormsimplicity.CustomerTests" name="testRetrievingFavouritesEagerly" time="1.45">
+          <failure message="Assertion failed: &#xa;&#xa;assert numberOfSelects &lt; 50&#xa;       |               |&#xa;       51              false&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
 
-      <testcase classname="ormsimplicity.BankingTransactionTests" name="testEagerDtoCreation" time="2.382" />
+assert numberOfSelects &lt; 50
+       |               |
+       51              false
+
+	at org.codehaus.groovy.runtime.InvokerHelper.assertFailed(InvokerHelper.java:386)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.assertFailed(ScriptBytecodeAdapter.java:658)
+	at ormsimplicity.CustomerTests.testRetrievingFavouritesEagerly(CustomerTests.groovy:114)
+	at org.codehaus.groovy.grails.test.junit4.runner.GrailsTestEnvironmentStatement$_evaluate_closure1.doCall(GrailsTestEnvironmentStatement.groovy:35)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSite.invoke(PogoMetaMethodSite.java:226)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:52)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:141)
+	at org.codehaus.groovy.grails.test.junit4.runner.GrailsTestEnvironmentStatement$_evaluate_closure1.doCall(GrailsTestEnvironmentStatement.groovy)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1047)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:877)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at groovy.lang.Closure.call(Closure.java:406)
+	at java_util_concurrent_Callable$call.call(Unknown Source)
+	at org.codehaus.groovy.grails.test.support.GrailsTestInterceptor.wrap(GrailsTestInterceptor.groovy:52)
+	at org.codehaus.groovy.grails.test.support.GrailsTestInterceptor$wrap.call(Unknown Source)
+	at org.codehaus.groovy.grails.test.junit4.runner.GrailsTestEnvironmentStatement.evaluate(GrailsTestEnvironmentStatement.groovy:34)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:42)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
+	at org.codehaus.groovy.grails.test.junit4.JUnit4GrailsTestType.doRun(JUnit4GrailsTestType.groovy:112)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:267)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:52)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:46)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:133)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:141)
+	at org.codehaus.groovy.grails.test.support.GrailsTestTypeSupport.run(GrailsTestTypeSupport.groovy:120)
+	at org.codehaus.groovy.grails.test.GrailsTestType$run.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:42)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
+</failure>
+
+      </testcase>
+
+      <testcase classname="ormsimplicity.CustomerTests" name="testRetrievingFavouritesEagerlyAgain" time="1.07">
+          <failure message="Assertion failed: &#xa;&#xa;assert numberOfSelects &lt; 50&#xa;       |               |&#xa;       52              false&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert numberOfSelects &lt; 50
+       |               |
+       52              false
+
+	at org.codehaus.groovy.runtime.InvokerHelper.assertFailed(InvokerHelper.java:386)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.assertFailed(ScriptBytecodeAdapter.java:658)
+	at ormsimplicity.CustomerTests.testRetrievingFavouritesEagerlyAgain(CustomerTests.groovy:131)
+	at org.codehaus.groovy.grails.test.junit4.runner.GrailsTestEnvironmentStatement$_evaluate_closure1.doCall(GrailsTestEnvironmentStatement.groovy:35)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSite.invoke(PogoMetaMethodSite.java:226)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:52)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:141)
+	at org.codehaus.groovy.grails.test.junit4.runner.GrailsTestEnvironmentStatement$_evaluate_closure1.doCall(GrailsTestEnvironmentStatement.groovy)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1047)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:877)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at groovy.lang.Closure.call(Closure.java:406)
+	at java_util_concurrent_Callable$call.call(Unknown Source)
+	at org.codehaus.groovy.grails.test.support.GrailsTestInterceptor.wrap(GrailsTestInterceptor.groovy:52)
+	at org.codehaus.groovy.grails.test.support.GrailsTestInterceptor$wrap.call(Unknown Source)
+	at org.codehaus.groovy.grails.test.junit4.runner.GrailsTestEnvironmentStatement.evaluate(GrailsTestEnvironmentStatement.groovy:34)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:42)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
+	at org.codehaus.groovy.grails.test.junit4.JUnit4GrailsTestType.doRun(JUnit4GrailsTestType.groovy:112)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:267)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:52)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:46)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:133)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:141)
+	at org.codehaus.groovy.grails.test.support.GrailsTestTypeSupport.run(GrailsTestTypeSupport.groovy:120)
+	at org.codehaus.groovy.grails.test.GrailsTestType$run.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:42)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
+</failure>
+
+      </testcase>
 
       <system-out><![CDATA[]]></system-out>
 
-      <system-err><![CDATA[--Output from testSimpleQuery--
---Output from testSimpleLazyPropertyAccess--
---Output from testSimpleEagerPropertyAccess--
---Output from testLazyDtoCreation--
---Output from testEagerDtoCreation--
+      <system-err><![CDATA[--Output from testNotRetrievingFavouritesCollection--
+--Output from testRetrievingFavouritesCollection--
+--Output from testRetrievingFavouritesLazily--
+--Output from testRetrievingFavouritesEagerly--
+--Output from testRetrievingFavouritesEagerlyAgain--
 ]]></system-err>
 
   </testsuite>

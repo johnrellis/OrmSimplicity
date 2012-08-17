@@ -2,6 +2,8 @@ package ormsimplicity
 
 class Customer {
 
+  static hasMany = [favourites : Customer]
+
   String name
   Account account
 

@@ -18,7 +18,9 @@
                         5
                         tests
                     
-                        without a single error or failure!
+                        with
+                        2 failures
+                        .
                     </p>
 </div>
 <div class="grid_2 omega">
@@ -41,65 +43,169 @@
 </nav>
 </div>
 <div class="clear"></div>
-<div class="testsuite success">
+<div class="testsuite failure">
 <div class="header">
-<h2>BankingTransactionTests</h2>
+<h2>CustomerTests</h2>
 <h3>
                         Executed
                         5
                         tests
                     
-                        without a single error or failure!
+                        with
+                        2 failures
+                        .
                     </h3>
 </div>
-<div class="testcase clearfix success grid_8 alpha omega" data-name="testSimpleQuery">
+<div class="testcase clearfix success grid_8 alpha omega" data-name="testNotRetrievingFavouritesCollection">
 <div class="grid_3 alpha">
 <p>
-<span class="icon success"></span><b class="testname message success">testSimpleQuery</b>
+<span class="icon success"></span><b class="testname message success">testNotRetrievingFavouritesCollection</b>
 </p>
-<p class="summary">Executed in 3.626 seconds.</p>
+<p class="summary">Executed in 1.63 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
 </div>
-<div class="testcase clearfix success grid_8 alpha omega" data-name="testSimpleLazyPropertyAccess">
+<div class="testcase clearfix success grid_8 alpha omega" data-name="testRetrievingFavouritesCollection">
 <div class="grid_3 alpha">
 <p>
-<span class="icon success"></span><b class="testname message success">testSimpleLazyPropertyAccess</b>
+<span class="icon success"></span><b class="testname message success">testRetrievingFavouritesCollection</b>
 </p>
-<p class="summary">Executed in 2.176 seconds.</p>
+<p class="summary">Executed in 0.897 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
 </div>
-<div class="testcase clearfix success grid_8 alpha omega" data-name="testSimpleEagerPropertyAccess">
+<div class="testcase clearfix success grid_8 alpha omega" data-name="testRetrievingFavouritesLazily">
 <div class="grid_3 alpha">
 <p>
-<span class="icon success"></span><b class="testname message success">testSimpleEagerPropertyAccess</b>
+<span class="icon success"></span><b class="testname message success">testRetrievingFavouritesLazily</b>
 </p>
-<p class="summary">Executed in 1.636 seconds.</p>
+<p class="summary">Executed in 0.932 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
 </div>
-<div class="testcase clearfix success grid_8 alpha omega" data-name="testLazyDtoCreation">
+<div class="testcase clearfix failure grid_8 alpha omega" data-name="testRetrievingFavouritesEagerly">
 <div class="grid_3 alpha">
 <p>
-<span class="icon success"></span><b class="testname message success">testLazyDtoCreation</b>
+<span class="icon failure"></span><b class="testname message failure">testRetrievingFavouritesEagerly</b>
 </p>
-<p class="summary">Executed in 1.797 seconds.</p>
+<p class="summary">Executed in 1.45 seconds.</p>
 </div>
-<div class="grid_5 omega outputinfo"></div>
+<div class="grid_5 omega outputinfo">
+<div class="details">
+<p>
+<b class="message">Assertion failed: 
+
+assert numberOfSelects &lt; 50
+       |               |
+       51              false
+</b>
+</p>
+<pre>junit.framework.AssertionFailedError: Assertion failed: 
+
+assert numberOfSelects &lt; 50
+       |               |
+       51              false
+
+	at org.codehaus.groovy.runtime.InvokerHelper.assertFailed(InvokerHelper.java:386)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.assertFailed(ScriptBytecodeAdapter.java:658)
+	at ormsimplicity.CustomerTests.testRetrievingFavouritesEagerly(CustomerTests.groovy:114)
+	at org.codehaus.groovy.grails.test.junit4.runner.GrailsTestEnvironmentStatement$_evaluate_closure1.doCall(GrailsTestEnvironmentStatement.groovy:35)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSite.invoke(PogoMetaMethodSite.java:226)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:52)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:141)
+	at org.codehaus.groovy.grails.test.junit4.runner.GrailsTestEnvironmentStatement$_evaluate_closure1.doCall(GrailsTestEnvironmentStatement.groovy)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1047)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:877)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at groovy.lang.Closure.call(Closure.java:406)
+	at java_util_concurrent_Callable$call.call(Unknown Source)
+	at org.codehaus.groovy.grails.test.support.GrailsTestInterceptor.wrap(GrailsTestInterceptor.groovy:52)
+	at org.codehaus.groovy.grails.test.support.GrailsTestInterceptor$wrap.call(Unknown Source)
+	at org.codehaus.groovy.grails.test.junit4.runner.GrailsTestEnvironmentStatement.evaluate(GrailsTestEnvironmentStatement.groovy:34)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:42)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
+	at org.codehaus.groovy.grails.test.junit4.JUnit4GrailsTestType.doRun(JUnit4GrailsTestType.groovy:112)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:267)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:52)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:46)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:133)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:141)
+	at org.codehaus.groovy.grails.test.support.GrailsTestTypeSupport.run(GrailsTestTypeSupport.groovy:120)
+	at org.codehaus.groovy.grails.test.GrailsTestType$run.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:42)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
+</pre>
+</div>
+</div>
 <div class="clear"></div>
 </div>
-<div class="testcase clearfix success grid_8 alpha omega" data-name="testEagerDtoCreation">
+<div class="testcase clearfix failure grid_8 alpha omega" data-name="testRetrievingFavouritesEagerlyAgain">
 <div class="grid_3 alpha">
 <p>
-<span class="icon success"></span><b class="testname message success">testEagerDtoCreation</b>
+<span class="icon failure"></span><b class="testname message failure">testRetrievingFavouritesEagerlyAgain</b>
 </p>
-<p class="summary">Executed in 2.382 seconds.</p>
+<p class="summary">Executed in 1.07 seconds.</p>
 </div>
-<div class="grid_5 omega outputinfo"></div>
+<div class="grid_5 omega outputinfo">
+<div class="details">
+<p>
+<b class="message">Assertion failed: 
+
+assert numberOfSelects &lt; 50
+       |               |
+       52              false
+</b>
+</p>
+<pre>junit.framework.AssertionFailedError: Assertion failed: 
+
+assert numberOfSelects &lt; 50
+       |               |
+       52              false
+
+	at org.codehaus.groovy.runtime.InvokerHelper.assertFailed(InvokerHelper.java:386)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.assertFailed(ScriptBytecodeAdapter.java:658)
+	at ormsimplicity.CustomerTests.testRetrievingFavouritesEagerlyAgain(CustomerTests.groovy:131)
+	at org.codehaus.groovy.grails.test.junit4.runner.GrailsTestEnvironmentStatement$_evaluate_closure1.doCall(GrailsTestEnvironmentStatement.groovy:35)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSite.invoke(PogoMetaMethodSite.java:226)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:52)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:141)
+	at org.codehaus.groovy.grails.test.junit4.runner.GrailsTestEnvironmentStatement$_evaluate_closure1.doCall(GrailsTestEnvironmentStatement.groovy)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1047)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:877)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at groovy.lang.Closure.call(Closure.java:406)
+	at java_util_concurrent_Callable$call.call(Unknown Source)
+	at org.codehaus.groovy.grails.test.support.GrailsTestInterceptor.wrap(GrailsTestInterceptor.groovy:52)
+	at org.codehaus.groovy.grails.test.support.GrailsTestInterceptor$wrap.call(Unknown Source)
+	at org.codehaus.groovy.grails.test.junit4.runner.GrailsTestEnvironmentStatement.evaluate(GrailsTestEnvironmentStatement.groovy:34)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:42)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
+	at org.codehaus.groovy.grails.test.junit4.JUnit4GrailsTestType.doRun(JUnit4GrailsTestType.groovy:112)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:267)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:52)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:46)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:133)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:141)
+	at org.codehaus.groovy.grails.test.support.GrailsTestTypeSupport.run(GrailsTestTypeSupport.groovy:120)
+	at org.codehaus.groovy.grails.test.GrailsTestType$run.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:42)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
+</pre>
+</div>
+</div>
 <div class="clear"></div>
 </div>
 <div class="clearfix output footer">
@@ -109,11 +215,11 @@
 </div>
 <div class="syserr">
 <h2>System error</h2>
-<pre class="syserr">--Output from testSimpleQuery--
---Output from testSimpleLazyPropertyAccess--
---Output from testSimpleEagerPropertyAccess--
---Output from testLazyDtoCreation--
---Output from testEagerDtoCreation--
+<pre class="syserr">--Output from testNotRetrievingFavouritesCollection--
+--Output from testRetrievingFavouritesCollection--
+--Output from testRetrievingFavouritesLazily--
+--Output from testRetrievingFavouritesEagerly--
+--Output from testRetrievingFavouritesEagerlyAgain--
 </pre>
 </div>
 </div>

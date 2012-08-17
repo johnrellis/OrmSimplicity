@@ -1,5 +1,0 @@
---Output from testSimpleQuery--
---Output from testSimpleLazyPropertyAccess--
---Output from testSimpleEagerPropertyAccess--
---Output from testLazyDtoCreation--
---Output from testEagerDtoCreation--
